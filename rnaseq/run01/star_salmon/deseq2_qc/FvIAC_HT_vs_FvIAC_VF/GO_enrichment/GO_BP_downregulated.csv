@@ -1,0 +1,100 @@
+GO.ID,Term,Annotated,Significant,Expected,Classic,p.adj
+GO:0097237,cellular response to toxic substance,82,12,4.2,0.00082,0.02533
+GO:1901605,alpha-amino acid metabolic process,177,19,9.07,0.00152,0.02533
+GO:0071265,L-methionine biosynthetic process,18,5,0.92,0.00167,0.02533
+GO:0009636,response to toxic substance,101,13,5.18,0.00171,0.02533
+GO:1990748,cellular detoxification,68,10,3.49,0.00214,0.02533
+GO:0046416,D-amino acid metabolic process,6,3,0.31,0.00237,0.02533
+GO:0006098,pentose-phosphate shunt,12,4,0.62,0.0024,0.02533
+GO:0006730,one-carbon metabolic process,12,4,0.62,0.0024,0.02533
+GO:0019752,carboxylic acid metabolic process,417,34,21.38,0.00354,0.02533
+GO:0006820,monoatomic anion transport,191,19,9.79,0.00367,0.02533
+GO:0043094,cellular metabolic compound salvage,31,6,1.59,0.00422,0.02533
+GO:0031167,rRNA methylation,14,4,0.72,0.00447,0.02533
+GO:0015711,organic anion transport,167,17,8.56,0.00468,0.02533
+GO:0016053,organic acid biosynthetic process,196,19,10.05,0.00488,0.02533
+GO:0046394,carboxylic acid biosynthetic process,196,19,10.05,0.00488,0.02533
+GO:0010035,response to inorganic substance,76,10,3.9,0.00492,0.02533
+GO:0044283,small molecule biosynthetic process,349,29,17.89,0.00547,0.02533
+GO:0009067,aspartate family amino acid biosynthetic...,43,7,2.2,0.00558,0.02533
+GO:0043436,oxoacid metabolic process,430,34,22.04,0.00579,0.02533
+GO:0044281,small molecule metabolic process,766,54,39.27,0.00583,0.02533
+GO:0051156,glucose 6-phosphate metabolic process,15,4,0.77,0.00585,0.02533
+GO:0015849,organic acid transport,103,12,5.28,0.00586,0.02533
+GO:0006082,organic acid metabolic process,431,34,22.09,0.006,0.02533
+GO:0070086,ubiquitin-dependent endocytosis,8,3,0.41,0.00614,0.02533
+GO:0015821,methionine transport,3,2,0.15,0.00758,0.02658
+GO:0019322,pentose biosynthetic process,3,2,0.15,0.00758,0.02658
+GO:0046900,tetrahydrofolylpolyglutamate metabolic p...,3,2,0.15,0.00758,0.02658
+GO:0046901,tetrahydrofolylpolyglutamate biosyntheti...,3,2,0.15,0.00758,0.02658
+GO:1903825,organic acid transmembrane transport,94,11,4.82,0.00795,0.02658
+GO:0042221,response to chemical,623,45,31.94,0.00813,0.02658
+GO:0098754,detoxification,82,10,4.2,0.00843,0.02658
+GO:0043102,amino acid salvage,9,3,0.46,0.00886,0.02658
+GO:0071267,L-methionine salvage,9,3,0.46,0.00886,0.02658
+GO:0015914,phospholipid transport,26,5,1.33,0.00916,0.02662
+GO:0006740,NADPH regeneration,17,4,0.87,0.00941,0.02662
+GO:0001510,RNA methylation,37,6,1.9,0.01032,0.02725
+GO:0009069,serine family amino acid metabolic proce...,37,6,1.9,0.01032,0.02725
+GO:0006855,xenobiotic transmembrane transport,72,9,3.69,0.01046,0.02725
+GO:0006520,amino acid metabolic process,242,21,12.41,0.01111,0.0282
+GO:0006760,folic acid-containing compound metabolic...,10,3,0.51,0.01218,0.02941
+GO:0009396,folic acid-containing compound biosynthe...,10,3,0.51,0.01218,0.02941
+GO:0072348,sulfur compound transport,28,5,1.44,0.0126,0.0297
+GO:0045332,phospholipid translocation,19,4,0.97,0.01415,0.03086
+GO:0009086,methionine biosynthetic process,29,5,1.49,0.01461,0.03086
+GO:0006768,biotin metabolic process,4,2,0.21,0.01465,0.03086
+GO:0009102,biotin biosynthetic process,4,2,0.21,0.01465,0.03086
+GO:1905329,sphingoid long-chain base transport,4,2,0.21,0.01465,0.03086
+GO:0032456,endocytic recycling,11,3,0.56,0.01613,0.03194
+GO:0042558,pteridine-containing compound metabolic ...,11,3,0.56,0.01613,0.03194
+GO:0042559,pteridine-containing compound biosynthet...,11,3,0.56,0.01613,0.03194
+GO:0034204,lipid translocation,20,4,1.03,0.01699,0.03277
+GO:0044272,sulfur compound biosynthetic process,78,9,4,0.01721,0.03277
+GO:0006739,NADP metabolic process,21,4,1.08,0.02017,0.03436
+GO:0097035,regulation of membrane lipid distributio...,21,4,1.08,0.02017,0.03436
+GO:0019682,glyceraldehyde-3-phosphate metabolic pro...,12,3,0.62,0.02071,0.03436
+GO:0046352,disaccharide catabolic process,12,3,0.62,0.02071,0.03436
+GO:0009066,aspartate family amino acid metabolic pr...,55,7,2.82,0.02095,0.03436
+GO:0006555,methionine metabolic process,32,5,1.64,0.02189,0.03436
+GO:0000101,sulfur amino acid transport,5,2,0.26,0.0236,0.03436
+GO:0002090,regulation of receptor internalization,5,2,0.26,0.0236,0.03436
+GO:0002092,positive regulation of receptor internal...,5,2,0.26,0.0236,0.03436
+GO:0006546,glycine catabolic process,5,2,0.26,0.0236,0.03436
+GO:0006657,CDP-choline pathway,5,2,0.26,0.0236,0.03436
+GO:0019464,glycine decarboxylation via glycine clea...,5,2,0.26,0.0236,0.03436
+GO:0019509,L-methionine salvage from methylthioaden...,5,2,0.26,0.0236,0.03436
+GO:0031623,receptor internalization,5,2,0.26,0.0236,0.03436
+GO:0032447,protein urmylation,5,2,0.26,0.0236,0.03436
+GO:0055092,sterol homeostasis,5,2,0.26,0.0236,0.03436
+GO:0000154,rRNA modification,23,4,1.18,0.02755,0.03953
+GO:0046942,carboxylic acid transport,100,10,5.13,0.03076,0.04302
+GO:0009313,oligosaccharide catabolic process,14,3,0.72,0.03177,0.04302
+GO:0046503,glycerolipid catabolic process,14,3,0.72,0.03177,0.04302
+GO:0061687,detoxification of inorganic compound,14,3,0.72,0.03177,0.04302
+GO:0006575,cellular modified amino acid metabolic p...,60,7,3.08,0.0322,0.04302
+GO:0042908,xenobiotic transport,87,9,4.46,0.03263,0.04302
+GO:0009051,pentose-phosphate shunt, oxidative branc...,6,2,0.31,0.03421,0.04302
+GO:0034775,glutathione transmembrane transport,6,2,0.31,0.03421,0.04302
+GO:0098656,monoatomic anion transmembrane transport,131,12,6.72,0.03469,0.04302
+GO:0043144,sno(s)RNA processing,36,5,1.85,0.03476,0.04302
+GO:0046434,organophosphate catabolic process,36,5,1.85,0.03476,0.04302
+GO:0042542,response to hydrogen peroxide,25,4,1.28,0.03636,0.04434
+GO:0009451,RNA modification,103,10,5.28,0.03673,0.04434
+GO:0003333,amino acid transmembrane transport,49,6,2.51,0.03742,0.04441
+GO:0006563,L-serine metabolic process,15,3,0.77,0.03825,0.04441
+GO:0019321,pentose metabolic process,15,3,0.77,0.03825,0.04441
+GO:0000097,sulfur amino acid biosynthetic process,37,5,1.9,0.03858,0.04441
+GO:0006811,monoatomic ion transport,341,25,17.48,0.04042,0.046
+GO:1905039,carboxylic acid transmembrane transport,91,9,4.66,0.04187,0.0471
+GO:0006869,lipid transport,51,6,2.61,0.04432,0.04775
+GO:0046015,regulation of transcription by glucose,16,3,0.82,0.04535,0.04775
+GO:0006790,sulfur compound metabolic process,152,13,7.79,0.04612,0.04775
+GO:0009071,serine family amino acid catabolic proce...,7,2,0.36,0.0463,0.04775
+GO:0015936,coenzyme A metabolic process,7,2,0.36,0.0463,0.04775
+GO:0034635,glutathione transport,7,2,0.36,0.0463,0.04775
+GO:0048259,regulation of receptor-mediated endocyto...,7,2,0.36,0.0463,0.04775
+GO:0048260,positive regulation of receptor-mediated...,7,2,0.36,0.0463,0.04775
+GO:0006865,amino acid transport,52,6,2.67,0.04805,0.04854
+GO:0044242,cellular lipid catabolic process,52,6,2.67,0.04805,0.04854
+GO:0070887,cellular response to chemical stimulus,450,31,23.07,0.04962,0.04962
