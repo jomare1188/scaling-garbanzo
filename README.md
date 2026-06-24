@@ -7,9 +7,14 @@ This repository accompanies the study of *Fusarium verticillioides* and its inte
 
 ## Palette of colours
 
-"#E64B35FF" "#4DBBD5FF" "#00A087FF" "#3C5488FF" "#F39B7FFF"
+"#E64B35FF" for FvIAC_HT 
+
+"#4DBBD5FF" for FvIAC_VF
+
+Others colors that can be used: "#00A087FF" "#3C5488FF" "#F39B7FFF"
 
 
+#4DBBD5FF
 
 ## RNAseq Workflow Description
 
