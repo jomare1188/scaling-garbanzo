@@ -14,8 +14,6 @@ This repository accompanies the study of *Fusarium verticillioides* and its inte
 Others colors that can be used: "#00A087FF" "#3C5488FF" "#F39B7FFF"
 
 
-#4DBBD5FF
-
 ## RNAseq Workflow Description
 
 | sample      | fastq_1 | fastq_2 | group | strandedness | rep |
