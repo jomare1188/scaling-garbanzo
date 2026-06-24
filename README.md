@@ -5,6 +5,12 @@
 This repository accompanies the study of *Fusarium verticillioides* and its interaction with a virus
 
 
+## Palette of colours
+
+"#E64B35FF" "#4DBBD5FF" "#00A087FF" "#3C5488FF" "#F39B7FFF"
+
+
+
 ## RNAseq Workflow Description
 
 | sample      | fastq_1 | fastq_2 | group | strandedness | rep |
@@ -88,14 +94,19 @@ To get insights about the function and the processes that are represented by the
 - GO: We used topGO R package (v2.58.0), p-value < 0.05 and corrected for multiple testing using BH (FDR) procedure
 
 - Up genes
-![up_enrichment](rnaseq/run01/star_salmon/deseq2_qc/Fv_IAC_VI_vs_Fv_IAC_VF/GO_enrichment/GO_BP_upregulated.png)
+![up_enrichment](rnaseq/run01/star_salmon/deseq2_qc/FvIAC_HT_vs_FvIAC_VF/GO_enrichment/GO_BP_upregulated.png)
+![up_table](rnaseq/run01/star_salmon/deseq2_qc/FvIAC_HT_vs_FvIAC_VF/GO_enrichment/GO_BP_upregulated.csv)
 
 - Down genes
-![down_enrichment](rnaseq/run01/star_salmon/deseq2_qc/Fv_IAC_VI_vs_Fv_IAC_VF/GO_enrichment/GO_BP_downregulated.png)
+![down_enrichment](rnaseq/run01/star_salmon/deseq2_qc/FvIAC_HT_vs_FvIAC_VF/GO_enrichment/GO_BP_downregulated.png)
+![down_table](rnaseq/run01/star_salmon/deseq2_qc/FvIAC_HT_vs_FvIAC_VF/GO_enrichment/GO_BP_downregulated.csv)
+
 
 See erichment results for all contrastas in the server
 
-- `/dados02/jorge/israel_rnaseq/rnaseq/run01/star_salmon/deseq2_qc/Fv_IAC_VI_vs_Fv_IAC_VF/GO_enrichment`
+- `/dados02/jorge/israel_rnaseq/rnaseq/run01/star_salmon/deseq2_qc/FvIAC_HT_vs_FvIAC_VF/GO_enrichment`
+
+
 
 
 
