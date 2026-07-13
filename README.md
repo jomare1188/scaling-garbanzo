@@ -110,6 +110,21 @@ See erichment results for all contrastas in the server
 - `/dados02/jorge/israel_rnaseq/rnaseq/run01/star_salmon/deseq2_qc/FvIAC_HT_vs_FvIAC_VF/GO_enrichment`
 
 
+Hypothesis
+
+1. A presença do micovírus altera a coloração e a morfologia das colônias fúngicas.
+
+2. O micovírus interfere na capacidade de produção de esporos do fungo.
+
+3. O micovírus modifica a capacidade do fungo de utilizar diferentes fontes de carbono.
+
+4. O micovírus modula vias metabólicas do hospedeiro fúngico.
+
+5. O micovírus influencia o perfil de compostos orgânicos voláteis emitidos pelo fungo.
+
+6. O micovírus afeta a capacidade do fungo de causar doença no hospedeiro vegetal.
+
+7. O micovírus altera a interação tritrófica entre fungo, planta e inseto por meio da modulação de sinais químicos.
 
 
 
