@@ -34,19 +34,19 @@ library(readr)
 # PARAMETERS — edit this section
 # ============================================================================
 
-results_dir     <- "/dados02/jorge/israel_rnaseq/rnaseq/run01/star_salmon/deseq2_qc"
-annotation_file <- "/dados01/jorge/rnaseq_diatraea/reference_genomes/fusarium_verticillioides/eggnog_anot/eggnog_anot.emapper.annotations"
+results_dir     <- "/dados04/jorge/israel_rnaseq/rnaseq/run01/star_salmon/deseq2_qc"
+annotation_file <- "/dados04/jorge/rnaseq_diatraea/reference_genomes/fusarium_verticillioides/eggnog_anot/eggnog_anot.emapper.annotations"
 
 # tx2gene TSV (columns: transcript_id, gene_id, gene_name).
 # Used to translate DEG file IDs (XM_* or FVEG_*) → FVEG_* locus tags.
 # Set to NULL if DEG files already contain FVEG_* IDs.
-tx2gene_file <- "/dados02/jorge/israel_rnaseq/rnaseq/run01/star_salmon/salmon.merged.tx2gene.tsv"
+tx2gene_file <- "/dados04/jorge/israel_rnaseq/rnaseq/run01/star_salmon/salmon.merged.tx2gene.tsv"
 
 # GTF file for F. verticillioides.
 # Used to build XP_* protein_id → FVEG_* gene_id lookup so that
 # eggNOG annotations (queried with XP_* IDs) end up in FVEG_* space.
 # Set to NULL if eggNOG was run directly against FVEG_* sequences.
-gtf_file <- "/dados01/jorge/rnaseq_diatraea/reference_genomes/fusarium_verticillioides/GCF_000149555.1_ASM14955v1_genomic.gtf.gz"
+gtf_file <- "/dados04/jorge/rnaseq_diatraea/reference_genomes/fusarium_verticillioides/GCF_000149555.1_ASM14955v1_genomic.gtf.gz"
 
 # GO ontology to test: "BP", "MF", or "CC"
 ontology <- "BP"
