@@ -1,0 +1,6 @@
+hypothesis,sets_tested,sets_sig_fisher,best_set_fisher,best_dir,best_padj_fisher,total_DEG_hits,sets_sig_fgsea,best_set_fgsea,best_NES,best_padj_fgsea
+H4,7,1,H4_cytochrome_P450,down,0.0034817911735002495,95,1,H4_cytochrome_P450,-1.78,0.016915672525914287
+H5,6,1,H5_methyltransferases_SAM,down,0.0034817911735002495,133,1,H5_methyltransferases_SAM,-1.83,0.008849811057750876
+H1,3,0,H1_pigment_carotenoid,down,0.49904780072383226,11,1,H1_pigment_PKS_backbone,-1.99,0.005510196722702892
+H2,6,0,H2_MAPK_signaling,up,0.35527022369878924,22,1,H2_sporulation_GO,1.62,0.026367027974278895
+H3,7,0,H3_glycolysis_TCA,up,0.08923944771523261,206,1,H3_glycolysis_TCA,1.43,0.04854402932957179
