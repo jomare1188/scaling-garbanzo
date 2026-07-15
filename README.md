@@ -202,83 +202,57 @@ genes that were actually *eligible* to be called differentially expressed — an
 eggNOG annotation. Genes removed by DESeq2 independent filtering were excluded; including them would
 inflate the apparent enrichment of every set.
 
+#### 7.4 Gene set sizes and annotation coverage
+
 **Curated sets (n = 27).**
 
-| Hypothesis | Gene sets | Primary annotation evidence |
-|---|---|---|
-| **H1** — pigmentation | bikaverin, fusarubin, carotenoid, DHN-melanin, PKS backbone | `Preferred_name`, `Description`, PFAM (`ketoacyl-synt`), EC |
-| **H2** — sporulation / conidiation | conidiation core, velvet/LaeA complex, sporulation GO, MAPK cascade, cAMP–PKA, light response | `Preferred_name`, PFAM (`Velvet`), GO (GO:0030435, GO:0048315, GO:0043938, GO:0075307, GO:1903666) |
-| **H3** — carbon source utilization | CAZy classes (GH, GT, PL, CE, AA), sugar transporters, carbon catabolite repression, glycolysis/TCA, alternative carbon pathways | `CAZy`, PFAM (`Sugar_tr`, `MFS_1`), KEGG (ko00010/20/30/40/51/52/500/520/620/630/640/650) |
-| **H4** — host metabolic pathways | secondary-metabolite backbone, cytochrome P450, oxidative stress, glutathione detoxification, pentose-phosphate, sulfur/methionine, RNAi machinery | KEGG (ko00030, ko00270, ko00480, ko00920), PFAM, EC |
-| **H5** — volatile organic compounds | terpene synthases, alcohol/aldehyde dehydrogenases, Ehrlich (fusel) pathway, oxylipin / fatty-acid oxidation, esterases & lipases, SAM-methyltransferases | PFAM (`Terpene_synth`, `ADH_N`, `Aldedh`, `Lipoxygenase`), EC (1.1.1.1, 1.2.1.3) |
 
-**Data-driven sets.** In addition, all KEGG pathways (`ko#####`) and all CAZy families with ≥ 3 genes
-in the universe were tested automatically, providing an unbiased complement to the
-hypothesis-directed sets.
+For each set: the hypothesis it serves, its size in the 8,742-gene universe, and the
+exact matching rules used against the eggNOG columns. A gene is included if it matches
+**any** criterion (logical OR). Field tags: `Name` = `Preferred_name` (exact, case-insensitive);
+`Desc~` = `Description` regex; `PFAM` = `PFAMs`; `EC` = `EC` prefix; `CAZy` = `CAZy` family/class;
+`KEGG` = `KEGG_Pathway`; `GO` = `GOs`.
 
-#### 7.4 Gene set sizes and annotation coverage
+| Gene set | Hyp. | n | Status | Evidence field(s) | Exact match terms / patterns |
+|---|---|--:|---|---|---|
+| `H1_pigment_bikaverin` | H1 | 0 | not testable | Name; Desc~ | Name: BIK1, BIK2, BIK3, BIK4, BIK5, BIK6, bik1, PKS4 · Desc~: `bikaverin` |
+| `H1_pigment_fusarubin` | H1 | 0 | not testable | Name; Desc~ | Name: PGL1, fsr1–fsr6, PKS3 · Desc~: `fusarubin\|naphthoquinone` |
+| `H1_pigment_carotenoid` | H1 | 4 | tested | Name; Desc~; EC | Name: carRA, carB, carO, carX, carT, CRTYB · Desc~: `phytoene\|carotene\|carotenoid\|lycopene` · EC: 1.3.5.5, 5.5.1.19 |
+| `H1_pigment_melanin_DHN` | H1 | 14 | tested | Name; Desc~; PFAM | Name: PKS12, ARP1, ARP2, ABR1, ABR2, BRN1, BRN2, SCD1, THR1, AYG1 · Desc~: `scytalone\|trihydroxynaphthalene\|tetrahydroxynaphthalene\|melanin\|laccase` · PFAM: Cu-oxidase, Cu-oxidase_2, Cu-oxidase_3 |
+| `H1_pigment_PKS_backbone` | H1 | 18 | tested | PFAM; Desc~ | PFAM: ketoacyl-synt, Ketoacyl-synt_C, PKS_AT, PKS_DE, PKS_ER, Acyl_transf_1 · Desc~: `polyketide synthase` |
+| `H2_conidiation_core` | H2 | 5 | tested | Name; Desc~ | Name: brlA, abaA, wetA, vosA, medA, stuA, flbA–flbE, fluG, rodA, dewA, con6, con10, chsD · Desc~: `conidiation\|conidiophore\|conidium` |
+| `H2_velvet_LaeA` | H2 | 6 | tested | Name; PFAM; Desc~ | Name: veA, velB, velC, vosA, laeA, LAE1, VEL1, VEL2, VEL3 · PFAM: Velvet · Desc~: `velvet` |
+| `H2_sporulation_GO` | H2 | 117 | tested | GO | GO: GO:0030435, GO:0043934, GO:0043938, GO:0075307, GO:0048315, GO:1903666, GO:0034293 |
+| `H2_MAPK_signaling` | H2 | 8 | tested | Name; Desc~ | Name: FUS3, KSS1, STE7, STE11, STE12, HOG1, PBS2, SSK2, SLT2, BCK1, MKK1, MST11, MST7, GPMK1, FMK1 · Desc~: `mitogen-activated protein kinase` |
+| `H2_cAMP_PKA` | H2 | 11 | tested | Name; Desc~ | Name: CYR1, PKA1, PKA2, TPK1, TPK2, BCY1, GPA1, GPA2, GPA3, PDE1, PDE2, RAS1, RAS2 · Desc~: `adenylate cyclase\|cAMP-dependent protein kinase` |
+| `H2_light_response` | H2 | 5 | tested | Name; Desc~ | Name: wc-1, wc-2, WCO1, WC1, WC2, vvd, phy1, phy2, cryD, envoy · Desc~: `blue light\|photoreceptor\|white collar\|opsin\|cryptochrome` |
+| `H3_CAZy_GH_all` | H3 | 69 | tested | CAZy | CAZy class: GH (any GH family) |
+| `H3_CAZy_GT_all` | H3 | 59 | tested | CAZy | CAZy class: GT (any GT family) |
+| `H3_CAZy_PL_all` | H3 | 1 |  not testable | CAZy | CAZy class: PL (any PL family) |
+| `H3_CAZy_CE_all` | H3 | 2 | not testable | CAZy | CAZy class: CE (any CE family) |
+| `H3_CAZy_AA_all` | H3 | 4 | tested | CAZy | CAZy class: AA (any AA family) |
+| `H3_sugar_transporters` | H3 | 272 | tested | PFAM; Desc~ | PFAM: Sugar_tr, MFS_1, MFS_2 · Desc~: `sugar transporter\|hexose transporter\|monosaccharide transport` |
+| `H3_carbon_catabolite_repr` | H3 | 8 | tested | Name; Desc~ | Name: creA, cre1, creB, creC, creD, snf1, SNF1, hxk1, HXK1, glk1, mig1 · Desc~: `carbon catabolite` |
+| `H3_glycolysis_TCA` | H3 | 204 | tested | KEGG | KEGG: ko00010, ko00020, ko00030, ko00051, ko00052, ko00500, ko00620 |
+| `H3_alt_carbon_pathways` | H3 | 193 | tested | KEGG | KEGG: ko00040, ko00053, ko00520, ko00561, ko00630, ko00640, ko00650 |
+| `H4_secondary_metab_backbone` | H4 | 69 | tested | PFAM; Desc~ | PFAM: ketoacyl-synt, Condensation, AMP-binding, Terpene_synth, Terpene_synth_C, DMATS · Desc~: `polyketide synthase\|nonribosomal peptide synthetase\|terpene synthase\|prenyltransferase` |
+| `H4_cytochrome_P450` | H4 | 69 | tested | PFAM; Desc~ | PFAM: p450 · Desc~: `cytochrome P450` |
+| `H4_oxidative_stress` | H4 | 27 | tested | Name; Desc~ | Name: CAT1, CAT2, CAT3, SOD1, SOD2, CTT1, TRX1, TRX2, GPX1, GPX2, AP1, YAP1, SKN7 · Desc~: `catalase\|superoxide dismutase\|glutathione peroxidase\|thioredoxin\|peroxiredoxin` |
+| `H4_glutathione_detox` | H4 | 28 | tested | KEGG | KEGG: ko00480 (glutathione metabolism) |
+| `H4_pentose_phosphate` | H4 | 24 | tested | KEGG | KEGG: ko00030 (pentose phosphate pathway) |
+| `H4_sulfur_methionine` | H4 | 67 | tested | KEGG | KEGG: ko00920 (sulfur), ko00270 (cysteine/methionine) |
+| `H4_RNAi_antiviral` | H4 | 5 | tested | Name; PFAM; Desc~ | Name: dcl1, dcl2, DCL1, DCL2, ago1, ago2, AGO1, AGO2, qde1, qde2, qde3, rdrp1, sad1 · PFAM: Dicer_dimer, PAZ, Piwi, RNase_III · Desc~: `argonaute\|dicer\|RNA-dependent RNA polymerase` |
+| `H5_terpene_synthases` | H5 | 21 | tested | PFAM; Desc~ | PFAM: Terpene_synth, Terpene_synth_C, TRI5, Prenyltrans, polyprenyl_synt · Desc~: `terpene\|sesquiterpene\|trichodiene\|geranyl\|farnesyl` |
+| `H5_alcohol_aldehyde_DH` | H5 | 144 | tested | PFAM; EC; Desc~ | PFAM: ADH_N, ADH_zinc_N, Aldedh, ADH_N_2 · EC: 1.1.1.1, 1.2.1.3, 1.1.1.2 · Desc~: `alcohol dehydrogenase\|aldehyde dehydrogenase` |
+| `H5_Ehrlich_fusel` | H5 | 4 | tested | Name; Desc~ | Name: ARO8, ARO9, ARO10, PDC1, PDC5, PDC6, ADH1, ADH2, SFA1, BAT1, BAT2 · Desc~: `pyruvate decarboxylase\|aromatic aminotransferase\|branched-chain aminotransferase` |
+| `H5_fatty_acid_oxylipin` | H5 | 5 | tested | Name; PFAM; Desc~ | Name: ppo1, ppo2, ppo3, lox1, LOX, ppoA, ppoB, ppoC · PFAM: Lipoxygenase, An_peroxidase · Desc~: `lipoxygenase\|linoleate diol synthase\|oxylipin\|fatty acid desaturase` |
+| `H5_esterases_lipases` | H5 | 163 | tested | PFAM; Desc~ | PFAM: Abhydrolase_1, Abhydrolase_3, Lipase_3, COesterase · Desc~: `carboxylesterase\|lipase` |
+| `H5_methyltransferases_SAM` | H5 | 70 | tested | PFAM; Desc~ | PFAM: Methyltransf_2, Methyltransf_11, Methyltransf_12, Methyltransf_31 · Desc~: `O-methyltransferase` |
+
 
 Set sizes were computed **within the statistical universe** (8,742 genes) before any testing. Sets
 with fewer than `minSize = 3` genes could not be tested and are reported as **not testable** rather
 than as negative results.
-
-**H1 — pigmentation**
-
-| Gene set | Genes | Status |
-|---|---:|---|
-| `H1_pigment_bikaverin` | 0 |  not testable |
-| `H1_pigment_fusarubin` | 0 |  not testable |
-| `H1_pigment_carotenoid` | 4 | tested |
-| `H1_pigment_melanin_DHN` | 14 | tested |
-| `H1_pigment_PKS_backbone` | 18 | tested |
-
-**H2 — sporulation / conidiation**
-
-| Gene set | Genes | Status |
-|---|---:|---|
-| `H2_conidiation_core` | 5 | tested |
-| `H2_light_response` | 5 | tested |
-| `H2_velvet_LaeA` | 6 | tested |
-| `H2_MAPK_signaling` | 8 | tested |
-| `H2_cAMP_PKA` | 11 | tested |
-| `H2_sporulation_GO` | 117 | tested |
-
-**H3 — carbon source utilization**
-
-| Gene set | Genes | Status |
-|---|---:|---|
-| `H3_CAZy_PL_all` | 1 | not testable |
-| `H3_CAZy_CE_all` | 2 |  not testable |
-| `H3_CAZy_AA_all` | 4 | tested |
-| `H3_carbon_catabolite_repr` | 8 | tested |
-| `H3_CAZy_GT_all` | 59 | tested |
-| `H3_CAZy_GH_all` | 69 | tested |
-| `H3_alt_carbon_pathways` | 193 | tested |
-| `H3_glycolysis_TCA` | 204 | tested |
-| `H3_sugar_transporters` | 272 | tested |
-
-**H4 — host metabolic pathways**
-
-| Gene set | Genes | Status |
-|---|---:|---|
-| `H4_RNAi_antiviral` | 5 | tested |
-| `H4_pentose_phosphate` | 24 | tested |
-| `H4_oxidative_stress` | 27 | tested |
-| `H4_glutathione_detox` | 28 | tested |
-| `H4_sulfur_methionine` | 67 | tested |
-| `H4_secondary_metab_backbone` | 69 | tested |
-| `H4_cytochrome_P450` | 69 | tested |
-
-**H5 — volatile organic compounds**
-
-| Gene set | Genes | Status |
-|---|---:|---|
-| `H5_Ehrlich_fusel` | 4 | tested |
-| `H5_fatty_acid_oxylipin` | 5 | tested |
-| `H5_terpene_synthases` | 21 | tested |
-| `H5_methyltransferases_SAM` | 70 | tested |
-| `H5_alcohol_aldehyde_DH` | 144 | tested |
-| `H5_esterases_lipases` | 163 | tested |
 
 **Summary**
 
